@@ -6,6 +6,10 @@ class Job < ApplicationRecord
   validates :wage_under_bound, presence: true
   validates :wage_under_bound, numericality: { greater_than: 0}
 
+  has_many :resumes
+  belongs_to :user
+
+
   def publish!
     self.is_hidden = false
     self.save
