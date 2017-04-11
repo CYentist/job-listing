@@ -1,4 +1,6 @@
 class Job < ApplicationRecord
+  scope :published, -> { where(is_hidden: false)}
+
   validates :title, presence: true
   validates :wage_upper_bound, presence: true
   validates :wage_under_bound, presence: true
