@@ -1,4 +1,6 @@
 class ResumesController < ApplicationController
+before_action :authenticate_user!
+
   def index
     @resume = Resume.all
   end
