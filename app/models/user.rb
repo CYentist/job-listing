@@ -12,5 +12,14 @@ class User < ApplicationRecord
   has_many :jobs
   has_many :job_relationships
   has_many :followed_jobs, :through => :job_relationships, :source => :job
+  def is_follower?(job)
+    followed_jobs.include?(job)
+  end
+  def follow!(job)
+   followed_jobs << job
+ end
 
+ def unfollow!(job)
+   followed_jobs.delete(job)
+ end
 end

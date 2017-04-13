@@ -7,7 +7,13 @@ before_action :authenticate_user!
 
   def new
     @job = Job.find(params[:job_id])
-    @resume = Resume.new
+    if current_user.is_follower?(@job)
+      @resume = Resume.new
+    else
+      flash[:alert] = "你还未关注工作"
+      redirect_to job_path(@job)
+    end
+
   end
 
   def show

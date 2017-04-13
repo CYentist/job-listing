@@ -1,4 +1,13 @@
 <div class="col-md-12">
+  <span class="pull-right">
+  <% if current_user && current_user.is_follower?(@job) %>
+    <label class="label label-success"> 已关注 </label>
+    <%= link_to("取消关注", unfollow_job_path(@job), method: :post, class: "btn btn-default") %>
+  <% else %>
+    <label class="label label-warning"> 未关注 </label>
+    <%= link_to("关注", follow_job_path(@job), method: :post, class: "btn btn-default") %>
+  <% end %>
+</span>
   <h2 align = "center"><%= @job.title %></h2>
 
 
