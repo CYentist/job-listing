@@ -2,7 +2,7 @@ class ResumesController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @resume = Resume.all
+    @resumes = Resume.all
   end
 
   def new
