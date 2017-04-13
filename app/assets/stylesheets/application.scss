@@ -17,3 +17,113 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+* {
+  margin: 0;
+}
+
+// Trix Form
+.formatted_content{
+  min-height: 150px;
+  margin-bottom: 15px;
+}
+
+
+.def-footer{
+  position:relative;
+  .help-link{
+    float:left;
+    margin:0 40px;
+    li{
+    padding:0 10px;
+    }
+  }
+
+  .copyright-info{
+    float:left;
+    margin:0 40px;
+  }
+}
+
+
+html, body {
+  height: 100%;
+
+
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+
+}
+.page-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 70px;
+}
+.site-footer {
+  background: #323232;
+  color: #ffffff;
+  padding-top: 20px;
+  a:link {color: #CCCCCC};
+  a:visited {color: #CCCCCC}	;
+  a:hover {color: #FFFFFF}	;
+  a:active {color: #FFFFFF};
+}
+// config  by nfreeness
+
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+hr{
+  border: 0;
+  height: 0;
+  margin: 0;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+// navbar
+.navbar-header {
+img{
+  margin-top: 9px;
+  margin-right: 10px;
+  float:left;
+}
+}
+.navbar-link{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 2px;
+  // margin-left: 30px;
+  a:link {color: #666};
+  a:visited {color: #666}	;
+  a:hover {color: #43cb83}	;
+  a:active {color: #43cb83};
+
+}
+
+
+// body background set white
+.body-bg{
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(black, .1);
+  // height: 100%;
+  min-height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 60px;
+}
+
+// remove navebar default margin bottome
+.navbar{
+  margin-bottom: 0;
+}
