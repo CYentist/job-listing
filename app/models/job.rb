@@ -7,7 +7,7 @@ class Job < ApplicationRecord
   validates :wage_under_bound, numericality: { greater_than: 0}
 
   has_many :resumes
-  belongs_to :user
+  
 
 
   def publish!
